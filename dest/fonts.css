@@ -1,0 +1,67 @@
+/* FONT FACE - font-display: fallback; */
+
+/* VÍ DỤ - tuỳ chỉnh theo từng dự án*/
+
+@font-face {
+    font-family: 'vm';
+    src: url('../fonts/VilaneMedium.woff2') format('woff2'),
+        url('../fonts/VilaneMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vsb';
+    src: url('../fonts/VilaneSemiBold.woff2') format('woff2'),
+        url('../fonts/VilaneSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vr';
+    src: url('../fonts/VilaneRegular.woff2') format('woff2'),
+        url('../fonts/VilaneRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vt';
+    src: url('../fonts/VilaneThin.woff2') format('woff2'),
+        url('../fonts/VilaneThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vb';
+    src: url('../fonts/VilaneBold.woff2') format('woff2'),
+        url('../fonts/VilaneBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vl';
+    src: url('../fonts/VilaneLight.woff2') format('woff2'),
+        url('../fonts/VilaneLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'vel';
+    src: url('../fonts/VilaneExtraLight.woff2') format('woff2'),
+        url('../fonts/VilaneExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+}
+
