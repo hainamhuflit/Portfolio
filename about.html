@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -23,11 +23,8 @@
     <link rel="stylesheet" href="dest/fonts.css">
 </head>
 
-<!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
-
-<body id="homepage">
-
-    <div class="intro isHome">
+<body id='about'>
+    <div class="intro">
         <div class="left-slide"></div>
         <div class="right-slide"></div>
         <div class="load-line"></div>
@@ -65,7 +62,7 @@
 
     <div class="loading">
         <div class="center-line"></div>
-    </div>
+    </div> 
 
     <div class="cursor"></div>
     <!-- HEADER -->
@@ -112,70 +109,142 @@
         <a href="/contact.html" class="nav-item">Contact</a>
     </nav>
 
-    <!-- MAIN -->
-    <main class="mainwrapper isHome">
-        <!-- Example HTML -->
-        <section id="headline">
-            <div id="particles-js"></div>
+    <main class='mainwrapper isAbout'>
+        <div id="particles-js"></div>
+        <section class="about-1 section">
             <div class="container">
-                <div class="avatar-wrapper hover">
-                    <div class="avatar" style='background-image: url(./img/avt.jpg)'></div>
+                <div class="abt-title">
+                    <h3 class="hover">About me</h3>
+                    <div class="titleLine"></div>
                 </div>
-                <div class="introdution">
-                    <div class="greeting">
-                        <h5>H</h5>
-                        <h5>i</h5>
-                        <h5>,</h5>
-                        <h5>I</h5>
-                        <h5>a</h5>
-                        <h5>m</h5>
+                <div class="abt-content half abt-pd">
+                    <div class="abt-desc hover">
+                        <p> Hello there! My name is <span>Tran Le Hai Nam</span>.
+                            I am a Frontend Developer and I'm very passionate and
+                            dedicated to my work.</p>
+                        </br>
+                        <p>I believe that I have necessary skills and knowledge
+                            to contribute to your project's success.
+                        </p>
                     </div>
-                    <div class="name">
-                        <h2>T</h2>
-                        <h2>r</h2>
-                        <h2>a</h2>
-                        <h2>n</h2>
-                        <h2>l</h2>
-                        <h2>e</h2>
-                        <h2>h</h2>
-                        <h2>a</h2>
-                        <h2>i</h2>
-                        <h2>n</h2>
-                        <h2>a</h2>
-                        <h2>m</h2>
+                    <ul class="abt-info hover">
+                        <li>
+                            <span class="first">Name</span>
+                            <span class="second">Tran Le Hai Nam</span>
+                        </li>
+                        <li>
+                            <span class="first">Address</span>
+                            <span class="second">Tan Binh District, HCMC</span>
+                        </li>
+                        <li>
+                            <span class="first">Study</span>
+                            <span class="second">HCMC University of Foreign Language and Information Technology</span>
+                        </li>
+                        <li>
+                            <span class="first">Degree</span>
+                            <span class="second">Software Engineer</span>
+                        </li>
+                        <li>
+                            <span class="first">Mail</span>
+                            <span class="second">hainam.huflit@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="first">Phone</span>
+                            <span class="second">+84 365 898 833</span>
+                        </li>
 
-                        <div class="line"></div>
-                    </div>
-                    <div class="name-desc">
-                        <h3 class="grey">F</h3>
-                        <h3 class="grey">r</h3>
-                        <h3 class="grey">o</h3>
-                        <h3 class="grey">n</h3>
-                        <h3 class="grey">t</h3>
-                        <h3 class="grey">e</h3>
-                        <h3 class="grey">n</h3>
-                        <h3 class="grey">d</h3>
-                        <h3>D</h3>
-                        <h3>e</h3>
-                        <h3>v</h3>
-                        <h3>e</h3>
-                        <h3>l</h3>
-                        <h3>o</h3>
-                        <h3>p</h3>
-                        <h3>e</h3>
-                        <h3>r</h3>
-                    </div>
-                    <a class="contact-btn hover">
-                        Get in touch
-                    </a>
+                    </ul>
                 </div>
             </div>
         </section>
+
+        <section class="about-2 section">
+            <div class="container half">
+                <div class="program">
+                    <div class="abt-title">
+                        <h3 class='hover'>Skills</h3>
+                        <div class="titleLine"></div>
+                    </div>
+                    <div class="abt-content half abt-pd hover">
+                        <div class="left">
+                            <p>HTML5, CSS3, SCSS</p>
+                            <p>ReactJS</p>
+                            <p>Javascript, Jquery</p>
+                        </div>
+                        <div class="right">
+                            <p>Adobe Photoshop, AI, Figma</p>
+                            <p>Responsive, Bootstrap</p>
+                            <p>Grunt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certi">
+                    <div class="abt-title ">
+                        <h3 class='hover'>Certificate</h3>
+                        <div class="titleLine"></div>
+                    </div>
+                    <div class="abt-content abt-pd hover">
+                        <h5>CEFR B2 - Upper Intermediate</h5>
+                        <p>Valid: Oct 2021 - Oct 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-3 section">
+            <div class="container half">
+                <div class="edu">
+                    <div class="abt-title">
+                        <h3 class='hover'>Education</h3>
+                        <div class="titleLine"></div>
+                    </div>
+                    <ul class="abt-content list hover">
+                        <div class="timeLine"></div>
+                        <li>
+                            <div class="time">
+                                <span>2017 - 2021</span>
+                            </div>
+                            <div class="place">
+                                <h5>HUFLIT</h5>
+                                <span>Bachelor of Software Engineer</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time">
+                                <span>2021 - 2022</span>
+                            </div>
+                            <div class="place">
+                                <h5>CFD Cirlce</h5>
+                                <span>Frontend Developer</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="experience">
+                    <div class="abt-title">
+                        <h3 class='hover'>Experience</h3>
+                        <div class="titleLine"></div>
+                    </div>
+                    <ul class="abt-content list hover">
+                        <div class="timeLine"></div>
+                        <li>
+                            <div class="time">
+                                <span>2022 - running</span>
+                            </div>
+                            <div class="place">
+                                <h5>BioTuring</h5>
+                                <span>Software Engineer</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
-
 </body>
 
 </html>

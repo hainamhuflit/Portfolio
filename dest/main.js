@@ -1,12 +1,12 @@
+// if ($('.mainwrapper').hasClass('isHome')) {
 //Particles JS
-
 particlesJS('particles-js', {
         "particles": {
             "number": {
-                "value": 80,
+                "value": 20,
                 "density": {
                     "enable": true,
-                    "value_area": 800
+                    "value_area": 250
                 }
             },
             "color": {
@@ -38,11 +38,11 @@ particlesJS('particles-js', {
                 }
             },
             "size": {
-                "value": 5,
+                "value": 7,
                 "random": true,
                 "anim": {
                     "enable": false,
-                    "speed": 40,
+                    "speed": 80,
                     "size_min": 0.1,
                     "sync": false
                 }
@@ -56,7 +56,7 @@ particlesJS('particles-js', {
             },
             "move": {
                 "enable": true,
-                "speed": 6,
+                "speed": 8,
                 "direction": "none",
                 "random": false,
                 "straight": false,
@@ -118,95 +118,24 @@ particlesJS('particles-js', {
     }
 
 );
+// }
 
-// Window onLoad
+// Glitch Effect
 
-$(window).on('load', () => {
-    $('.loading').addClass('hide');
-
-    if ($('.loading').hasClass('hide')) {
-        introPage();
-    }
+$(function () {
+    $('.avatar').mgGlitch({
+        destroy: false,
+        glitch: true,
+        scale: true,
+        blend: true,
+        blendModeType: 'hue',
+        glitch1TimeMin: 400,
+        glitch1TimeMax: 500,
+        glitch2TimeMin: 20,
+        glitch2TimeMax: 300,
+        zIndexStart: 8,
+    })
 })
-
-const introPage = () => {
-    const tl = gsap.timeline({
-        default: {
-            ease: 'power3.out'
-        }
-    })
-
-    tl.from('.intro-logo svg .t-1', {
-        x: '-100%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .n-3', {
-        x: '100%',
-        duration: .3,
-        delay: .1
-    })
-    tl.from('.intro-logo svg .t-2', {
-        y: '-100%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .l-1', {
-        x: '-51.29px',
-        y: '-200%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .l-2', {
-        x: '100%',
-        y: '-50.22px',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .h-1', {
-        y: '100%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .h-2', {
-        y: '100%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .h-3', {
-        x: '-200%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .n-1', {
-        y: '100%',
-        duration: .3,
-    })
-    tl.from('.intro-logo svg .n-2', {
-        y: '100%',
-        duration: .3,
-    })
-
-    tl.to('.intro-text h3', {
-        y: '0%',
-        opacity: 1,
-        stagger: .15,
-    })
-
-    tl.to('.intro-content', {
-        opacity: 0,
-        delay: 1
-    })
-    tl.to('.load-line', {
-        bottom: '-200%',
-        opacity: 0,
-        duration: .7
-    })
-
-    tl.to('.left-slide', {
-        x: '-100%',
-        duration: .5
-    })
-    tl.to('.right-slide', {
-        x: '100%',
-        duration: .5
-    }, '-=.5')
-
-
-}
 
 // Custom cursor
 
@@ -227,32 +156,176 @@ hoverEffect.on('mouseleave', function () {
     cursor.removeClass('active');
 })
 
-// Glitch Effect
-
-$(function () {
-    $('.avatar').mgGlitch({
-        destroy: false,
-        glitch: true,
-        scale: true,
-        blend: true,
-        blendModeType: 'hue',
-        glitch1TimeMin: 400,
-        glitch1TimeMax: 500,
-        glitch2TimeMin: 20,
-        glitch2TimeMax: 300,
-        zIndexStart: 8,
-    })
-})
 
 // Hamburger
 const hamburger = document.querySelector('.hamburger'),
-    hamburgerLine1 = document.querySelector('.hamburger .line1'),
-    hamburgerLine2 = document.querySelector('.hamburger .line1'),
-    hamburgerLine3 = document.querySelector('.hamburger .line1'),
     navbar = document.querySelector('.nav');
 
-
-hamburger.addEventListener('click', function () {
-    this.classList.toggle('active')
-    navbar.classList.toggle('active')
+const navtl = gsap.timeline({
+    default: {
+        ease: 'power4.inOut'
+    }
 })
+
+$(hamburger).on('click', function (e) {
+    e.stopPropagation();
+    $(hamburger).toggleClass('active')
+    $(navbar).toggleClass('active')
+    if ($(navbar).hasClass('active')) {
+        navtl.from('nav a', {
+            y: '100%',
+            opacity: 0,
+            duration: .4,
+            delay: .5,
+            stagger: .15
+        })
+    }
+})
+
+$(document).on('click', (e) => {
+    e.stopPropagation();
+    $(hamburger).removeClass('active')
+    $(navbar).removeClass('active')
+})
+
+// Window onLoad
+
+$(window).on('load', () => {
+    setTimeout(() => {
+        $('.loading').addClass('hide');
+
+        if ($('.loading').hasClass('hide')) {
+            introPage();
+            if ($('.mainwrapper').hasClass('isHome')) {
+                homePageAnmimation();
+            }
+        }
+    }, 1500)
+})
+
+//Intro
+const tl = gsap.timeline({
+    default: {
+        ease: 'expo.inOut'
+    }
+})
+
+const introPage = () => {
+
+    if ($('.intro').hasClass('isHome')) {
+        tl.from('.intro-logo svg .t-1', {
+            x: '-100%',
+            duration: .4,
+            delay: .7
+        })
+        tl.from('.intro-logo svg .n-3', {
+            x: '200%',
+            duration: .4,
+            delay: .1
+        }, '-=.5')
+        tl.from('.intro-logo svg .t-2', {
+            y: '-200%',
+            duration: .4,
+        }, '-=.5')
+        tl.from('.intro-logo svg .l-1', {
+            x: '-51.29px',
+            y: '-200%',
+            duration: .4,
+        }, '-=.3')
+        tl.from('.intro-logo svg .l-2', {
+            x: '200%',
+            y: '-50.22px',
+            duration: .4,
+        }, '-=.3')
+        tl.from('.intro-logo svg .h-1', {
+            y: '200%',
+            duration: .4,
+        }, '-=.4')
+        tl.from('.intro-logo svg .h-2', {
+            y: '200%',
+            duration: .4,
+        }, '-=.2')
+        tl.from('.intro-logo svg .h-3', {
+            x: '-200%',
+            duration: .4,
+        }, '-=.5')
+        tl.from('.intro-logo svg .n-1', {
+            y: '200%',
+            duration: .4,
+        }, '-=.2')
+        tl.from('.intro-logo svg .n-2', {
+            y: '200%',
+            duration: .4,
+        }, '-=.2')
+        // name
+        tl.to('.intro-text h3', {
+            y: '0%',
+            opacity: 1,
+            stagger: .12,
+        }, '-=.3')
+        //hide
+        tl.to('.intro-content', {
+            opacity: 0,
+            duration: .5,
+            delay: 1
+        }, '-=.1')
+        // slice line
+        tl.to('.load-line', {
+            bottom: '-200%',
+            opacity: 0,
+            duration: .7,
+        })
+    } else {
+        tl.to('.load-line', {
+            bottom: '-200%',
+            opacity: 0,
+            duration: .7,
+            delay: .7
+        })
+    }
+
+    tl.to('.left-slide', {
+        x: '-100%',
+        duration: .5
+    })
+    tl.to('.right-slide', {
+        x: '100%',
+        duration: .5
+    }, '-=.5')
+}
+
+const homePageAnmimation = () => {
+
+    tl.from('.avatar-wrapper', {
+        opacity: 0,
+        duration: .7,
+    })
+
+    tl.from('.greeting h5', {
+        y: '-100%',
+        opacity: 0,
+        duration: .5,
+        stagger: .11
+    }, '-=.5')
+    tl.from('.name h2', {
+        y: '100%',
+        opacity: 0,
+        duration: .2,
+        stagger: .1
+    }, '-=.7')
+    tl.from('.name .line', {
+        width: '0px',
+        duration: .5,
+        stagger: .11
+    }, '-=.7')
+    tl.from('.name-desc h3', {
+        opacity: 0,
+        duration: .3,
+        stagger: .1
+    }, '-=.2')
+    tl.from('.contact-btn', {
+        opacity: 0,
+        duration: .5,
+        stagger: .11
+    }, '-=.5')
+}
