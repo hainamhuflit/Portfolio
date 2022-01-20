@@ -3,7 +3,7 @@ if ($('.mainwrapper').hasClass('isParticle')) {
     particlesJS('particles-js', {
             "particles": {
                 "number": {
-                    "value": 20,
+                    "value": 12,
                     "density": {
                         "enable": true,
                         "value_area": 250
@@ -19,7 +19,7 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                         "color": "#000000"
                     },
                     "polygon": {
-                        "nb_sides": 5
+                        "nb_sides": 4
                     },
                     "image": {
                         "src": "img/github.svg",
@@ -28,11 +28,11 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                     }
                 },
                 "opacity": {
-                    "value": 0.5,
+                    "value": 0.4,
                     "random": false,
                     "anim": {
                         "enable": false,
-                        "speed": 1,
+                        "speed": .5,
                         "opacity_min": 0.1,
                         "sync": false
                     }
@@ -42,23 +42,23 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                     "random": true,
                     "anim": {
                         "enable": false,
-                        "speed": 80,
+                        "speed": 70,
                         "size_min": 0.1,
                         "sync": false
                     }
                 },
                 "line_linked": {
                     "enable": true,
-                    "distance": 150,
+                    "distance": 300,
                     "color": "#000",
                     "opacity": 0.4,
                     "width": 1
                 },
                 "move": {
                     "enable": true,
-                    "speed": 8,
+                    "speed": 7,
                     "direction": "none",
-                    "random": false,
+                    "random": true,
                     "straight": false,
                     "out_mode": "out",
                     "attract": {
@@ -99,7 +99,7 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                         "distance": 200
                     },
                     "push": {
-                        "particles_nb": 4
+                        "particles_nb": 2
                     },
                     "remove": {
                         "particles_nb": 2
@@ -119,23 +119,6 @@ if ($('.mainwrapper').hasClass('isParticle')) {
 
     );
 }
-
-// Glitch Effect
-
-$(function () {
-    $('.avatar').mgGlitch({
-        destroy: false,
-        glitch: true,
-        scale: true,
-        blend: true,
-        blendModeType: 'hue',
-        glitch1TimeMin: 400,
-        glitch1TimeMax: 500,
-        glitch2TimeMin: 20,
-        glitch2TimeMax: 300,
-        zIndexStart: 8,
-    })
-})
 
 // Custom cursor
 
