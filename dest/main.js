@@ -1,124 +1,124 @@
-// if ($('.mainwrapper').hasClass('isHome')) {
-//Particles JS
-particlesJS('particles-js', {
-        "particles": {
-            "number": {
-                "value": 20,
-                "density": {
-                    "enable": true,
-                    "value_area": 250
-                }
-            },
-            "color": {
-                "value": "#000"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 7,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 80,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#000",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 8,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
+if ($('.mainwrapper').hasClass('isParticle')) {
+    //Particles JS
+    particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 20,
+                    "density": {
+                        "enable": true,
+                        "value_area": 250
                     }
                 },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
+                "color": {
+                    "value": "#000"
                 },
-                "repulse": {
-                    "distance": 200
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
                 },
-                "push": {
-                    "particles_nb": 4
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
                 },
-                "remove": {
-                    "particles_nb": 2
+                "size": {
+                    "value": 7,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 80,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#000",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 8,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
                 }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true,
+            "config_demo": {
+                "hide_card": false,
+                "background_color": "#b61924",
+                "background_image": "",
+                "background_position": "50% 50%",
+                "background_repeat": "no-repeat",
+                "background_size": "cover"
             }
-        },
-        "retina_detect": true,
-        "config_demo": {
-            "hide_card": false,
-            "background_color": "#b61924",
-            "background_image": "",
-            "background_position": "50% 50%",
-            "background_repeat": "no-repeat",
-            "background_size": "cover"
         }
-    }
 
-);
-// }
+    );
+}
 
 // Glitch Effect
 
@@ -197,7 +197,10 @@ $(window).on('load', () => {
         if ($('.loading').hasClass('hide')) {
             introPage();
             if ($('.mainwrapper').hasClass('isHome')) {
-                homePageAnmimation();
+                homePage();
+            }
+            if ($('.mainwrapper').hasClass('isAbout')) {
+                aboutPage();
             }
         }
     }, 1500)
@@ -214,7 +217,7 @@ const introPage = () => {
 
     if ($('.intro').hasClass('isHome')) {
         tl.from('.intro-logo svg .t-1', {
-            x: '-100%',
+            x: '-200%',
             duration: .4,
             delay: .7
         })
@@ -294,9 +297,10 @@ const introPage = () => {
     }, '-=.5')
 }
 
-const homePageAnmimation = () => {
+const homePage = () => {
 
     tl.from('.avatar-wrapper', {
+        y: '-5%',
         opacity: 0,
         duration: .7,
     })
@@ -328,4 +332,44 @@ const homePageAnmimation = () => {
         duration: .5,
         stagger: .11
     }, '-=.5')
+}
+
+const aboutPage = () => {
+    tl.from('.abt-title h3', {
+        x: '-100%',
+        opacity: 0,
+        duration: .5,
+        stagger: .2
+    })
+    tl.from('.abt-title .titleLine', {
+        flex: 0,
+        opacity: 0,
+        duration: 1,
+        stagger: .3
+    }, '-=.5')
+    tl.from('.abt-content p', {
+        y: '50%',
+        opacity: 0,
+        duration: .5,
+        stagger: .1
+    }, '-=1')
+    tl.from('.abt-content .timeLine', {
+        height: '0%',
+        opacity: 0,
+        duration: 1,
+        stagger: .5
+    }, '-=1')
+    tl.from('.abt-content li', {
+        x: '50%',
+        opacity: 0,
+        duration: .5,
+        stagger: .05
+    }, '-=1.5')
+    tl.from('.abt-content h5', {
+        x: '50%',
+        opacity: 0,
+        duration: .5,
+        stagger: .1
+    }, '-=1')
+
 }
