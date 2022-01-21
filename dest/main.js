@@ -277,6 +277,7 @@ const introPage = () => {
         x: '-100%',
         duration: .5
     })
+
     tl.to('.right-slide', {
         x: '100%',
         duration: .5
@@ -405,3 +406,4 @@ const contactPage = () => {
         stagger: .2
     }, '-=.5')
 }
+
