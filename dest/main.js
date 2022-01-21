@@ -3,10 +3,10 @@ if ($('.mainwrapper').hasClass('isParticle')) {
     particlesJS('particles-js', {
             "particles": {
                 "number": {
-                    "value": 12,
+                    "value": 20,
                     "density": {
                         "enable": true,
-                        "value_area": 250
+                        "value_area": 300
                     }
                 },
                 "color": {
@@ -19,7 +19,7 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                         "color": "#000000"
                     },
                     "polygon": {
-                        "nb_sides": 4
+                        "nb_sides": 5
                     },
                     "image": {
                         "src": "img/github.svg",
@@ -32,33 +32,33 @@ if ($('.mainwrapper').hasClass('isParticle')) {
                     "random": false,
                     "anim": {
                         "enable": false,
-                        "speed": .5,
+                        "speed": 1,
                         "opacity_min": 0.1,
                         "sync": false
                     }
                 },
                 "size": {
-                    "value": 7,
+                    "value": 5,
                     "random": true,
                     "anim": {
                         "enable": false,
-                        "speed": 70,
+                        "speed": 40,
                         "size_min": 0.1,
                         "sync": false
                     }
                 },
                 "line_linked": {
                     "enable": true,
-                    "distance": 300,
+                    "distance": 200,
                     "color": "#000",
                     "opacity": 0.4,
                     "width": 1
                 },
                 "move": {
                     "enable": true,
-                    "speed": 7,
+                    "speed": 6,
                     "direction": "none",
-                    "random": true,
+                    "random": false,
                     "straight": false,
                     "out_mode": "out",
                     "attract": {
@@ -184,6 +184,9 @@ $(window).on('load', () => {
             }
             if ($('.mainwrapper').hasClass('isAbout')) {
                 aboutPage();
+            }
+            if ($('.mainwrapper').hasClass('isContact')) {
+                contactPage();
             }
         }
     }, 1500)
@@ -336,6 +339,10 @@ const aboutPage = () => {
         duration: .5,
         stagger: .1
     }, '-=1')
+    tl.from('.abt-content .cv-download', {
+        opacity: 0,
+        duration: .5,
+    }, '-=1')
     tl.from('.abt-content .timeLine', {
         height: '0%',
         opacity: 0,
@@ -355,4 +362,46 @@ const aboutPage = () => {
         stagger: .1
     }, '-=1')
 
+}
+
+const contactPage = () => {
+    tl.from('.slogan p', {
+        y: '-50%',
+        opacity: 0,
+        duration: .3,
+        stagger: .05
+    })
+    tl.from('.slogan span', {
+        opacity: 0,
+        duration: .3,
+        stagger: .1
+    }, '-=.3')
+    tl.from('.contact-form .cont-title', {
+        x: '-20%',
+        opacity: 0,
+        duration: .5,
+    }, '-=.6')
+    tl.from('.contact-form .titleLine', {
+        flex: 0,
+        opacity: 0,
+        duration: 1,
+    })
+    tl.from('.contact-desc p', {
+        y: '100%',
+        opacity: 0,
+        duration: .5,
+        stagger: .2
+    }, '-=1')
+    tl.from('.contact-info svg', {
+        y: '100%',
+        opacity: 0,
+        duration: .5,
+        stagger: .2
+    }, '-=.5')
+    tl.from('.contact-info span', {
+        y: '100%',
+        opacity: 0,
+        duration: .5,
+        stagger: .2
+    }, '-=.5')
 }
