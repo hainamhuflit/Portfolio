@@ -213,7 +213,6 @@
             }
         }, 1500)
     })
-
     //Intro
     const tl = gsap.timeline({
         default: {
