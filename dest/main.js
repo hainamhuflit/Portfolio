@@ -176,7 +176,6 @@
     const linkImages = document.querySelectorAll('.hidden-img');
 
     link.forEach((e, i) => {
-        console.log(i);
         link[i].addEventListener('mousemove', (e) => {
             linkHoverReveal[i].style.opacity = 1;
             linkHoverReveal[i].style.transform = `translate(-80%, -50% ) rotate(5deg)`;
